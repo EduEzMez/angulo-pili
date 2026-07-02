@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+html { scroll-behavior: smooth; }
+html, body { margin: 0; padding: 0; background: #F2F8F7; }
+* { box-sizing: border-box; }
+</style>
+</helmet>
+
+<div style="font-family:'Nunito',sans-serif;color:#21403A;background:#F2F8F7">
+
+  <!-- NAV -->
+  <nav data-screen-label="Navegación" style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid #DEEAE7">
+    <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:20px;padding:14px 24px;flex-wrap:wrap">
+      <a href="#inicio" style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:19px;color:#0B6E64;text-decoration:none">Ángulos entre paralelas</a>
+      <div style="flex:1"></div>
+      <div style="display:flex;gap:18px;flex-wrap:wrap">
+        <a href="#basico" style="font-size:15px;font-weight:700;color:#4E6B65;text-decoration:none" style-hover="color:#0B6E64">La figura</a>
+        <a href="#correspondientes" style="font-size:15px;font-weight:700;color:#4E6B65;text-decoration:none" style-hover="color:#0B6E64">Correspondientes</a>
+        <a href="#alternos" style="font-size:15px;font-weight:700;color:#4E6B65;text-decoration:none" style-hover="color:#0B6E64">Alternos</a>
+        <a href="#conjugados" style="font-size:15px;font-weight:700;color:#4E6B65;text-decoration:none" style-hover="color:#0B6E64">Conjugados</a>
+        <a href="#calculo" style="font-size:15px;font-weight:700;color:#4E6B65;text-decoration:none" style-hover="color:#0B6E64">Cálculo</a>
+        <a href="#practica" style="font-size:15px;font-weight:800;color:#FFFFFF;text-decoration:none;background:#0F9D8F;padding:6px 14px;border-radius:99px" style-hover="background:#0B6E64">Práctica</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="inicio" data-screen-label="Portada" style="background:#0B6E64;padding:72px 24px 64px">
+    <div style="max-width:1100px;margin:0 auto">
+      <div style="display:inline-block;background:rgba(255,255,255,.14);color:#CFF0EB;font-weight:800;font-size:14px;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:99px">Matemáticas · 2.º de secundaria</div>
+      <h1 style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:46px;line-height:1.15;color:#FFFFFF;margin:18px 0 14px;max-width:760px">Ángulos entre rectas paralelas y una transversal</h1>
+      <p style="font-size:19px;line-height:1.6;color:#D9F3EF;max-width:680px;margin:0 0 26px">Una guía sencilla para entender los ángulos correspondientes, alternos y conjugados, aprender a identificarlos, calcularlos y resolver ecuaciones. Al final hay una práctica tipo evaluación con explicaciones paso a paso.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="#basico" style="background:#FFFFFF;color:#0B6E64;font-weight:800;font-size:16px;text-decoration:none;padding:12px 22px;border-radius:12px" style-hover="background:#E6F4F1">Empezar por lo básico</a>
+        <a href="#practica" style="background:#F2A93B;color:#4A3005;font-weight:800;font-size:16px;text-decoration:none;padding:12px 22px;border-radius:12px" style-hover="background:#E29A2C">Ir directo a la práctica</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- BASICO -->
+  <section id="basico" data-screen-label="La figura clave" style="padding:72px 24px 56px">
+    <div style="max-width:1100px;margin:0 auto;display:flex;gap:40px;flex-wrap:wrap;align-items:center">
+      <div style="flex:1 1 480px;min-width:300px">
+        <div style="display:inline-block;background:#E1F1EE;color:#0B6E64;font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:99px;margin-bottom:12px">Antes de empezar</div>
+        <h2 style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:32px;color:#134E48;margin:0 0 14px">La figura clave: 2 paralelas + 1 transversal</h2>
+        <p style="font-size:17px;line-height:1.65;margin:0 0 12px">Cuando una recta <strong>transversal (t)</strong> corta a dos rectas <strong>paralelas (a y b)</strong>, se forman <strong>8 ángulos</strong>. Los numeramos del 1 al 8 y siempre usaremos esta misma figura.</p>
+        <p style="font-size:17px;line-height:1.65;margin:0 0 18px">Para identificar cualquier pareja de ángulos solo hay que responder <strong>dos preguntas</strong>:</p>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:18px">
+          <div style="background:#FFFFFF;border:1px solid #DEEAE7;border-radius:14px;padding:14px 18px">
+            <span style="font-weight:800;color:#0B6E64">1. ¿Dónde están?</span>
+            <span style="font-size:16px"> Entre las paralelas → <strong>internos</strong> (3, 4, 5, 6). Fuera de las paralelas → <strong>externos</strong> (1, 2, 7, 8).</span>
+          </div>
+          <div style="background:#FFFFFF;border:1px solid #DEEAE7;border-radius:14px;padding:14px 18px">
+            <span style="font-weight:800;color:#0B6E64">2. ¿De qué lado de la transversal?</span>
+            <span style="font-size:16px"> Del <strong>mismo lado</strong> o en <strong>lados opuestos</strong>.</span>
+          </div>
+        </div>
+        <div style="background:#FDF4E3;border:1px solid #F0D9A8;border-radius:14px;padding:14px 18px">
+          <span style="font-weight:800;color:#8A5B14">Dato que usarás siempre:</span>
+          <span style="font-size:16px;color:#6B4A10"> dos ángulos que juntos forman una línea recta suman 180° (suplementarios), y los ángulos opuestos por el vértice son iguales (∠1 = ∠4, ∠2 = ∠3…).</span>
+        </div>
+      </div>
+      <div style="flex:0 1 420px;min-width:300px">
+        <div style="background:#FFFFFF;border:1px solid #DEEAE7;border-radius:20px;padding:22px;box-shadow:0 2px 12px rgba(15,60,54,.06)">
+          <svg viewBox="0 0 360 300" style="width:100%;height:auto;display:block">
+            <rect x="20" y="93" width="310" height="114" fill="#0F9D8F" opacity="0.06"></rect>
+            <line x1="20" y1="90" x2="330" y2="90" stroke="#3A5B55" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="20" y1="210" x2="330" y2="210" stroke="#3A5B55" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="90" y1="21" x2="239" y2="279" stroke="#7C8F8B" stroke-width="3" stroke-linecap="round"></line>
+            <path d="M292,83 L306,90 L292,97" fill="none" stroke="#3A5B55" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"></path>
+            <path d="M292,203 L306,210 L292,217" fill="none" stroke="#3A5B55" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"></path>
+            <text x="343" y="95" font-family="Nunito" font-weight="800" font-size="16" fill="#3A5B55">a</text>
+            <text x="343" y="215" font-family="Nunito" font-weight="800" font-size="16" fill="#3A5B55">b</text>
+            <text x="250" y="268" font-family="Nunito" font-weight="800" font-size="16" fill="#7C8F8B">t</text>
+            <path d="M130,90 L104,90 A26,26 0 0 1 117,67.5 Z" fill="#F2A93B" opacity="0.8"></path>
+            <path d="M130,90 L117,67.5 A26,26 0 0 1 156,90 Z" fill="#F2A93B" opacity="0.55"></path>
+            <path d="M130,90 L143,112.5 A26,26 0 0 1 104,90 Z" fill="#2BB3A3" opacity="0.55"></path>
+            <path d="M130,90 L156,90 A26,26 0 0 1 143,112.5 Z" fill="#2BB3A3" opacity="0.8"></path>
+            <path d="M199,210 L173,210 A26,26 0 0 1 186,187.5 Z" fill="#2BB3A3" opacity="0.8"></path>
+            <path d="M199,210 L186,187.5 A26,26 0 0 1 225,210 Z" fill="#2BB3A3" opacity="0.55"></path>
+            <path d="M199,210 L212,232.5 A26,26 0 0 1 173,210 Z" fill="#F2A93B" opacity="0.55"></path>
+            <path d="M199,210 L225,210 A26,26 0 0 1 212,232.5 Z" fill="#F2A93B" opacity="0.8"></path>
+            <text x="97" y="76" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#B07A16">1</text>
+            <text x="151" y="61" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#B07A16">2</text>
+            <text x="109" y="129" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#0B6E64">3</text>
+            <text x="165" y="114" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#0B6E64">4</text>
+            <text x="166" y="196" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#0B6E64">5</text>
+            <text x="218" y="180" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#0B6E64">6</text>
+            <text x="178" y="249" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#B07A16">7</text>
+            <text x="234" y="234" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#B07A16">8</text>
+          </svg>
+          <div style="display:flex;gap:14px;justify-content:center;margin-top:12px;flex-wrap:wrap">
+            <div style="display:flex;align-items:center;gap:6px"><span style="width:14px;height:14px;border-radius:4px;background:#2BB3A3;display:inline-block"></span><span style="font-size:14px;font-weight:700;color:#4E6B65">Internos: 3, 4, 5, 6</span></div>
+            <div style="display:flex;align-items:center;gap:6px"><span style="width:14px;height:14px;border-radius:4px;background:#F2A93B;display:inline-block"></span><span style="font-size:14px;font-weight:700;color:#4E6B65">Externos: 1, 2, 7, 8</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORRESPONDIENTES -->
+  <section id="correspondientes" data-screen-label="Correspondientes" style="background:#FFFFFF;padding:64px 24px">
+    <div style="max-width:1100px;margin:0 auto;display:flex;gap:40px;flex-wrap:wrap;align-items:center">
+      <div style="flex:1 1 480px;min-width:300px">
+        <div style="display:inline-block;background:#E1F1EE;color:#0B6E64;font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:99px;margin-bottom:12px">Tema 1 · forman una F</div>
+        <h2 style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:32px;color:#134E48;margin:0 0 14px">Ángulos correspondientes</h2>
+        <p style="font-size:17px;line-height:1.65;margin:0 0 12px">Son los que ocupan <strong>la misma posición</strong> en cada cruce: uno arriba y otro abajo, pero los dos en la misma "esquina". Por ejemplo, ∠1 está arriba a la izquierda en el primer cruce y ∠5 está arriba a la izquierda en el segundo.</p>
+        <p style="font-size:17px;line-height:1.65;margin:0 0 18px"><strong>Cómo identificarlos:</strong> uno es interno y el otro externo, están del <strong>mismo lado</strong> de la transversal y en <strong>cruces distintos</strong>. Si sigues las líneas, dibujan una letra <strong>F</strong>.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px">
+          <span style="background:#E1F1EE;color:#0B6E64;font-weight:800;font-size:15px;padding:8px 14px;border-radius:99px">∠1 y ∠5</span>
+          <span style="background:#EEEBFB;color:#5A4BC7;font-weight:800;font-size:15px;padding:8px 14px;border-radius:99px">∠2 y ∠6</span>
+          <span style="background:#FDECE7;color:#C24A2F;font-weight:800;font-size:15px;padding:8px 14px;border-radius:99px">∠3 y ∠7</span>
+          <span style="background:#FDF4E3;color:#B07A16;font-weight:800;font-size:15px;padding:8px 14px;border-radius:99px">∠4 y ∠8</span>
+        </div>
+        <div style="background:#0F9D8F;border-radius:14px;padding:16px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+          <span style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:22px;color:#FFFFFF">Son IGUALES</span>
+          <span style="font-size:17px;color:#D9F3EF;font-weight:700">∠1 = ∠5 · ∠2 = ∠6 · ∠3 = ∠7 · ∠4 = ∠8</span>
+        </div>
+      </div>
+      <div style="flex:0 1 420px;min-width:300px">
+        <div style="background:#F7FBFA;border:1px solid #DEEAE7;border-radius:20px;padding:22px">
+          <svg viewBox="0 0 360 300" style="width:100%;height:auto;display:block">
+            <line x1="20" y1="90" x2="330" y2="90" stroke="#3A5B55" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="20" y1="210" x2="330" y2="210" stroke="#3A5B55" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="90" y1="21" x2="239" y2="279" stroke="#7C8F8B" stroke-width="3" stroke-linecap="round"></line>
+            <path d="M292,83 L306,90 L292,97" fill="none" stroke="#3A5B55" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"></path>
+            <path d="M292,203 L306,210 L292,217" fill="none" stroke="#3A5B55" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"></path>
+            <text x="343" y="95" font-family="Nunito" font-weight="800" font-size="16" fill="#3A5B55">a</text>
+            <text x="343" y="215" font-family="Nunito" font-weight="800" font-size="16" fill="#3A5B55">b</text>
+            <text x="250" y="268" font-family="Nunito" font-weight="800" font-size="16" fill="#7C8F8B">t</text>
+            <path d="M130,90 L104,90 A26,26 0 0 1 117,67.5 Z" fill="#0F9D8F" opacity="0.85"></path>
+            <path d="M130,90 L117,67.5 A26,26 0 0 1 156,90 Z" fill="#8B7CE8" opacity="0.85"></path>
+            <path d="M130,90 L143,112.5 A26,26 0 0 1 104,90 Z" fill="#F4795B" opacity="0.85"></path>
+            <path d="M130,90 L156,90 A26,26 0 0 1 143,112.5 Z" fill="#F2A93B" opacity="0.85"></path>
+            <path d="M199,210 L173,210 A26,26 0 0 1 186,187.5 Z" fill="#0F9D8F" opacity="0.85"></path>
+            <path d="M199,210 L186,187.5 A26,26 0 0 1 225,210 Z" fill="#8B7CE8" opacity="0.85"></path>
+            <path d="M199,210 L212,232.5 A26,26 0 0 1 173,210 Z" fill="#F4795B" opacity="0.85"></path>
+            <path d="M199,210 L225,210 A26,26 0 0 1 212,232.5 Z" fill="#F2A93B" opacity="0.85"></path>
+            <text x="97" y="76" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#0B6E64">1</text>
+            <text x="151" y="61" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#5A4BC7">2</text>
+            <text x="109" y="129" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#C24A2F">3</text>
+            <text x="165" y="114" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#B07A16">4</text>
+            <text x="166" y="196" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#0B6E64">5</text>
+            <text x="218" y="180" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#5A4BC7">6</text>
+            <text x="178" y="249" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#C24A2F">7</text>
+            <text x="234" y="234" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#B07A16">8</text>
+          </svg>
+          <p style="font-size:14px;font-weight:700;color:#4E6B65;text-align:center;margin:12px 0 0">Cada color marca una pareja de correspondientes: misma posición, distinto cruce.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALTERNOS -->
+  <section id="alternos" data-screen-label="Alternos" style="padding:64px 24px">
+    <div style="max-width:1100px;margin:0 auto">
+      <div style="display:inline-block;background:#E1F1EE;color:#0B6E64;font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:99px;margin-bottom:12px">Tema 2 · forman una Z</div>
+      <h2 style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:32px;color:#134E48;margin:0 0 10px">Ángulos alternos</h2>
+      <p style="font-size:17px;line-height:1.65;max-width:760px;margin:0 0 30px"><strong>"Alternos" significa en lados opuestos</strong> de la transversal. Si además los dos están entre las paralelas, son <strong>internos</strong>; si los dos están fuera, son <strong>externos</strong>. En ambos casos, <strong>son iguales</strong>.</p>
+      <div style="display:flex;gap:28px;flex-wrap:wrap">
+        <div style="flex:1 1 440px;min-width:300px;background:#FFFFFF;border:1px solid #DEEAE7;border-radius:20px;padding:28px">
+          <h3 style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:24px;color:#134E48;margin:0 0 10px">Alternos internos</h3>
+          <p style="font-size:16px;line-height:1.6;margin:0 0 14px">Entre las paralelas y en lados opuestos de la transversal. Las líneas dibujan una <strong>Z</strong>.</p>
+          <svg viewBox="0 0 360 300" style="width:100%;max-width:340px;height:auto;display:block;margin:0 auto">
+            <line x1="20" y1="90" x2="330" y2="90" stroke="#3A5B55" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="20" y1="210" x2="330" y2="210" stroke="#3A5B55" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="90" y1="21" x2="239" y2="279" stroke="#7C8F8B" stroke-width="3" stroke-linecap="round"></line>
+            <path d="M130,90 L143,112.5 A26,26 0 0 1 104,90 Z" fill="#0F9D8F" opacity="0.85"></path>
+            <path d="M130,90 L156,90 A26,26 0 0 1 143,112.5 Z" fill="#F4795B" opacity="0.85"></path>
+            <path d="M199,210 L173,210 A26,26 0 0 1 186,187.5 Z" fill="#F4795B" opacity="0.85"></path>
+            <path d="M199,210 L186,187.5 A26,26 0 0 1 225,210 Z" fill="#0F9D8F" opacity="0.85"></path>
+            <text x="97" y="76" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#9DB3AE">1</text>
+            <text x="151" y="61" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#9DB3AE">2</text>
+            <text x="109" y="129" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#0B6E64">3</text>
+            <text x="165" y="114" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#C24A2F">4</text>
+            <text x="166" y="196" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#C24A2F">5</text>
+            <text x="218" y="180" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#0B6E64">6</text>
+            <text x="178" y="249" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#9DB3AE">7</text>
+            <text x="234" y="234" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#9DB3AE">8</text>
+          </svg>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+            <span style="background:#E1F1EE;color:#0B6E64;font-weight:800;font-size:15px;padding:8px 14px;border-radius:99px">∠3 = ∠6</span>
+            <span style="background:#FDECE7;color:#C24A2F;font-weight:800;font-size:15px;padding:8px 14px;border-radius:99px">∠4 = ∠5</span>
+          </div>
+        </div>
+        <div style="flex:1 1 440px;min-width:300px;background:#FFFFFF;border:1px solid #DEEAE7;border-radius:20px;padding:28px">
+          <h3 style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:24px;color:#134E48;margin:0 0 10px">Alternos externos</h3>
+          <p style="font-size:16px;line-height:1.6;margin:0 0 14px">Fuera de las paralelas y en lados opuestos de la transversal. Uno arriba de todo, el otro abajo de todo.</p>
+          <svg viewBox="0 0 360 300" style="width:100%;max-width:340px;height:auto;display:block;margin:0 auto">
+            <line x1="20" y1="90" x2="330" y2="90" stroke="#3A5B55" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="20" y1="210" x2="330" y2="210" stroke="#3A5B55" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="90" y1="21" x2="239" y2="279" stroke="#7C8F8B" stroke-width="3" stroke-linecap="round"></line>
+            <path d="M130,90 L104,90 A26,26 0 0 1 117,67.5 Z" fill="#8B7CE8" opacity="0.85"></path>
+            <path d="M130,90 L117,67.5 A26,26 0 0 1 156,90 Z" fill="#F2A93B" opacity="0.85"></path>
+            <path d="M199,210 L212,232.5 A26,26 0 0 1 173,210 Z" fill="#F2A93B" opacity="0.85"></path>
+            <path d="M199,210 L225,210 A26,26 0 0 1 212,232.5 Z" fill="#8B7CE8" opacity="0.85"></path>
+            <text x="97" y="76" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#5A4BC7">1</text>
+            <text x="151" y="61" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#B07A16">2</text>
+            <text x="109" y="129" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#9DB3AE">3</text>
+            <text x="165" y="114" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#9DB3AE">4</text>
+            <text x="166" y="196" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#9DB3AE">5</text>
+            <text x="218" y="180" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#9DB3AE">6</text>
+            <text x="178" y="249" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#B07A16">7</text>
+            <text x="234" y="234" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#5A4BC7">8</text>
+          </svg>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+            <span style="background:#EEEBFB;color:#5A4BC7;font-weight:800;font-size:15px;padding:8px 14px;border-radius:99px">∠1 = ∠8</span>
+            <span style="background:#FDF4E3;color:#B07A16;font-weight:800;font-size:15px;padding:8px 14px;border-radius:99px">∠2 = ∠7</span>
+          </div>
+        </div>
+      </div>
+      <div style="background:#0F9D8F;border-radius:14px;padding:16px 20px;margin-top:28px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;max-width:760px">
+        <span style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:22px;color:#FFFFFF">Son IGUALES</span>
+        <span style="font-size:17px;color:#D9F3EF;font-weight:700">Lados opuestos de la transversal = misma medida</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONJUGADOS -->
+  <section id="conjugados" data-screen-label="Conjugados" style="background:#FFFFFF;padding:64px 24px">
+    <div style="max-width:1100px;margin:0 auto">
+      <div style="display:inline-block;background:#FDECE7;color:#C24A2F;font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:99px;margin-bottom:12px">Tema 3 · forman una C</div>
+      <h2 style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:32px;color:#134E48;margin:0 0 10px">Ángulos conjugados</h2>
+      <p style="font-size:17px;line-height:1.65;max-width:760px;margin:0 0 30px"><strong>"Conjugados" significa del mismo lado</strong> de la transversal. ¡Cuidado! Estos <strong>NO son iguales</strong>: son suplementarios, es decir, <strong>suman 180°</strong>. Es el error más común en las evaluaciones.</p>
+      <div style="display:flex;gap:28px;flex-wrap:wrap">
+        <div style="flex:1 1 440px;min-width:300px;background:#F7FBFA;border:1px solid #DEEAE7;border-radius:20px;padding:28px">
+          <h3 style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:24px;color:#134E48;margin:0 0 10px">Conjugados internos</h3>
+          <p style="font-size:16px;line-height:1.6;margin:0 0 14px">Entre las paralelas y del mismo lado de la transversal. Las líneas dibujan una <strong>C</strong>.</p>
+          <svg viewBox="0 0 360 300" style="width:100%;max-width:340px;height:auto;display:block;margin:0 auto">
+            <line x1="20" y1="90" x2="330" y2="90" stroke="#3A5B55" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="20" y1="210" x2="330" y2="210" stroke="#3A5B55" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="90" y1="21" x2="239" y2="279" stroke="#7C8F8B" stroke-width="3" stroke-linecap="round"></line>
+            <path d="M130,90 L143,112.5 A26,26 0 0 1 104,90 Z" fill="#0F9D8F" opacity="0.85"></path>
+            <path d="M130,90 L156,90 A26,26 0 0 1 143,112.5 Z" fill="#F4795B" opacity="0.85"></path>
+            <path d="M199,210 L173,210 A26,26 0 0 1 186,187.5 Z" fill="#0F9D8F" opacity="0.85"></path>
+            <path d="M199,210 L186,187.5 A26,26 0 0 1 225,210 Z" fill="#F4795B" opacity="0.85"></path>
+            <text x="97" y="76" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#9DB3AE">1</text>
+            <text x="151" y="61" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#9DB3AE">2</text>
+            <text x="109" y="129" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#0B6E64">3</text>
+            <text x="165" y="114" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#C24A2F">4</text>
+            <text x="166" y="196" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#0B6E64">5</text>
+            <text x="218" y="180" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#C24A2F">6</text>
+            <text x="178" y="249" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#9DB3AE">7</text>
+            <text x="234" y="234" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#9DB3AE">8</text>
+          </svg>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+            <span style="background:#E1F1EE;color:#0B6E64;font-weight:800;font-size:15px;padding:8px 14px;border-radius:99px">∠3 + ∠5 = 180°</span>
+            <span style="background:#FDECE7;color:#C24A2F;font-weight:800;font-size:15px;padding:8px 14px;border-radius:99px">∠4 + ∠6 = 180°</span>
+          </div>
+        </div>
+        <div style="flex:1 1 440px;min-width:300px;background:#F7FBFA;border:1px solid #DEEAE7;border-radius:20px;padding:28px">
+          <h3 style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:24px;color:#134E48;margin:0 0 10px">Conjugados externos</h3>
+          <p style="font-size:16px;line-height:1.6;margin:0 0 14px">Fuera de las paralelas y del mismo lado de la transversal.</p>
+          <svg viewBox="0 0 360 300" style="width:100%;max-width:340px;height:auto;display:block;margin:0 auto">
+            <line x1="20" y1="90" x2="330" y2="90" stroke="#3A5B55" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="20" y1="210" x2="330" y2="210" stroke="#3A5B55" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="90" y1="21" x2="239" y2="279" stroke="#7C8F8B" stroke-width="3" stroke-linecap="round"></line>
+            <path d="M130,90 L104,90 A26,26 0 0 1 117,67.5 Z" fill="#8B7CE8" opacity="0.85"></path>
+            <path d="M130,90 L117,67.5 A26,26 0 0 1 156,90 Z" fill="#F2A93B" opacity="0.85"></path>
+            <path d="M199,210 L212,232.5 A26,26 0 0 1 173,210 Z" fill="#8B7CE8" opacity="0.85"></path>
+            <path d="M199,210 L225,210 A26,26 0 0 1 212,232.5 Z" fill="#F2A93B" opacity="0.85"></path>
+            <text x="97" y="76" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#5A4BC7">1</text>
+            <text x="151" y="61" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#B07A16">2</text>
+            <text x="109" y="129" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#9DB3AE">3</text>
+            <text x="165" y="114" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#9DB3AE">4</text>
+            <text x="166" y="196" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#9DB3AE">5</text>
+            <text x="218" y="180" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#9DB3AE">6</text>
+            <text x="178" y="249" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#5A4BC7">7</text>
+            <text x="234" y="234" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="15" fill="#B07A16">8</text>
+          </svg>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+            <span style="background:#EEEBFB;color:#5A4BC7;font-weight:800;font-size:15px;padding:8px 14px;border-radius:99px">∠1 + ∠7 = 180°</span>
+            <span style="background:#FDF4E3;color:#B07A16;font-weight:800;font-size:15px;padding:8px 14px;border-radius:99px">∠2 + ∠8 = 180°</span>
+          </div>
+        </div>
+      </div>
+      <div style="background:#C24A2F;border-radius:14px;padding:16px 20px;margin-top:28px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;max-width:760px">
+        <span style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:22px;color:#FFFFFF">SUMAN 180°</span>
+        <span style="font-size:17px;color:#FBDDD3;font-weight:700">Mismo lado de la transversal = suplementarios, no iguales</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUMEN -->
+  <section id="resumen" data-screen-label="Resumen" style="padding:64px 24px">
+    <div style="max-width:1100px;margin:0 auto">
+      <h2 style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:32px;color:#134E48;margin:0 0 20px">Tabla resumen para repasar</h2>
+      <div style="background:#FFFFFF;border:1px solid #DEEAE7;border-radius:20px;overflow:auto">
+        <table style="width:100%;border-collapse:collapse;min-width:720px">
+          <thead>
+            <tr style="background:#0B6E64">
+              <th style="text-align:left;padding:14px 18px;font-size:15px;color:#FFFFFF">Tipo</th>
+              <th style="text-align:left;padding:14px 18px;font-size:15px;color:#FFFFFF">Parejas</th>
+              <th style="text-align:left;padding:14px 18px;font-size:15px;color:#FFFFFF">¿Dónde están?</th>
+              <th style="text-align:left;padding:14px 18px;font-size:15px;color:#FFFFFF">Relación</th>
+              <th style="text-align:left;padding:14px 18px;font-size:15px;color:#FFFFFF">Truco</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-top:1px solid #E8F1EF">
+              <td style="padding:13px 18px;font-size:15px;font-weight:800;color:#134E48">Correspondientes</td>
+              <td style="padding:13px 18px;font-size:15px">1-5 · 2-6 · 3-7 · 4-8</td>
+              <td style="padding:13px 18px;font-size:15px">Misma posición, distinto cruce</td>
+              <td style="padding:13px 18px;font-size:15px;font-weight:800;color:#0B6E64">Iguales</td>
+              <td style="padding:13px 18px;font-size:15px">Letra F</td>
+            </tr>
+            <tr style="border-top:1px solid #E8F1EF;background:#F7FBFA">
+              <td style="padding:13px 18px;font-size:15px;font-weight:800;color:#134E48">Alternos internos</td>
+              <td style="padding:13px 18px;font-size:15px">3-6 · 4-5</td>
+              <td style="padding:13px 18px;font-size:15px">Dentro, lados opuestos</td>
+              <td style="padding:13px 18px;font-size:15px;font-weight:800;color:#0B6E64">Iguales</td>
+              <td style="padding:13px 18px;font-size:15px">Letra Z</td>
+            </tr>
+            <tr style="border-top:1px solid #E8F1EF">
+              <td style="padding:13px 18px;font-size:15px;font-weight:800;color:#134E48">Alternos externos</td>
+              <td style="padding:13px 18px;font-size:15px">1-8 · 2-7</td>
+              <td style="padding:13px 18px;font-size:15px">Fuera, lados opuestos</td>
+              <td style="padding:13px 18px;font-size:15px;font-weight:800;color:#0B6E64">Iguales</td>
+              <td style="padding:13px 18px;font-size:15px">Z estirada</td>
+            </tr>
+            <tr style="border-top:1px solid #E8F1EF;background:#F7FBFA">
+              <td style="padding:13px 18px;font-size:15px;font-weight:800;color:#134E48">Conjugados internos</td>
+              <td style="padding:13px 18px;font-size:15px">3-5 · 4-6</td>
+              <td style="padding:13px 18px;font-size:15px">Dentro, mismo lado</td>
+              <td style="padding:13px 18px;font-size:15px;font-weight:800;color:#C24A2F">Suman 180°</td>
+              <td style="padding:13px 18px;font-size:15px">Letra C</td>
+            </tr>
+            <tr style="border-top:1px solid #E8F1EF">
+              <td style="padding:13px 18px;font-size:15px;font-weight:800;color:#134E48">Conjugados externos</td>
+              <td style="padding:13px 18px;font-size:15px">1-7 · 2-8</td>
+              <td style="padding:13px 18px;font-size:15px">Fuera, mismo lado</td>
+              <td style="padding:13px 18px;font-size:15px;font-weight:800;color:#C24A2F">Suman 180°</td>
+              <td style="padding:13px 18px;font-size:15px">C estirada</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:16px;line-height:1.6;color:#4E6B65;max-width:760px;margin:18px 0 0"><strong>Regla de oro:</strong> lados <strong>opuestos</strong> de la transversal → iguales. <strong>Mismo lado</strong> → suman 180°.</p>
+    </div>
+  </section>
+
+  <!-- CALCULO -->
+  <section id="calculo" data-screen-label="Cálculo y ecuaciones" style="background:#FFFFFF;padding:64px 24px">
+    <div style="max-width:1100px;margin:0 auto">
+      <div style="display:inline-block;background:#E1F1EE;color:#0B6E64;font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:99px;margin-bottom:12px">Tema 4</div>
+      <h2 style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:32px;color:#134E48;margin:0 0 10px">Cálculo de ángulos y ecuaciones</h2>
+      <p style="font-size:17px;line-height:1.65;max-width:760px;margin:0 0 26px">Todos los problemas se resuelven con el mismo método de 4 pasos:</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-bottom:36px">
+        <div style="background:#F7FBFA;border:1px solid #DEEAE7;border-radius:16px;padding:20px">
+          <div style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:26px;color:#0F9D8F;margin-bottom:6px">1</div>
+          <div style="font-weight:800;font-size:16px;margin-bottom:4px">Identifica la pareja</div>
+          <div style="font-size:15px;line-height:1.55;color:#4E6B65">¿Dentro o fuera? ¿Mismo lado o lados opuestos?</div>
+        </div>
+        <div style="background:#F7FBFA;border:1px solid #DEEAE7;border-radius:16px;padding:20px">
+          <div style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:26px;color:#0F9D8F;margin-bottom:6px">2</div>
+          <div style="font-weight:800;font-size:16px;margin-bottom:4px">Escribe la relación</div>
+          <div style="font-size:15px;line-height:1.55;color:#4E6B65">Correspondientes o alternos → iguales. Conjugados → suman 180°.</div>
+        </div>
+        <div style="background:#F7FBFA;border:1px solid #DEEAE7;border-radius:16px;padding:20px">
+          <div style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:26px;color:#0F9D8F;margin-bottom:6px">3</div>
+          <div style="font-weight:800;font-size:16px;margin-bottom:4px">Plantea la ecuación</div>
+          <div style="font-size:15px;line-height:1.55;color:#4E6B65">Sustituye lo que sabes: números o expresiones con x.</div>
+        </div>
+        <div style="background:#F7FBFA;border:1px solid #DEEAE7;border-radius:16px;padding:20px">
+          <div style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:26px;color:#0F9D8F;margin-bottom:6px">4</div>
+          <div style="font-weight:800;font-size:16px;margin-bottom:4px">Resuelve y comprueba</div>
+          <div style="font-size:15px;line-height:1.55;color:#4E6B65">Despeja x y verifica que las medidas tengan sentido.</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:28px;flex-wrap:wrap;align-items:stretch">
+        <div style="flex:1 1 340px;min-width:300px;background:#F7FBFA;border:1px solid #DEEAE7;border-radius:20px;padding:26px">
+          <div style="display:inline-block;background:#E1F1EE;color:#0B6E64;font-weight:800;font-size:13px;padding:4px 12px;border-radius:99px;margin-bottom:12px">Ejemplo A · con números</div>
+          <p style="font-size:16px;line-height:1.6;margin:0 0 12px"><strong>Si ∠1 = 60°, calcula ∠5 y ∠7.</strong></p>
+          <svg viewBox="0 0 360 300" style="width:100%;max-width:300px;height:auto;display:block;margin:0 auto 12px">
+            <line x1="20" y1="90" x2="330" y2="90" stroke="#3A5B55" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="20" y1="210" x2="330" y2="210" stroke="#3A5B55" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="90" y1="21" x2="239" y2="279" stroke="#7C8F8B" stroke-width="3" stroke-linecap="round"></line>
+            <path d="M130,90 L104,90 A26,26 0 0 1 117,67.5 Z" fill="#0F9D8F" opacity="0.85"></path>
+            <path d="M199,210 L173,210 A26,26 0 0 1 186,187.5 Z" fill="#F2A93B" opacity="0.85"></path>
+            <path d="M199,210 L212,232.5 A26,26 0 0 1 173,210 Z" fill="#8B7CE8" opacity="0.85"></path>
+            <text x="93" y="72" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="16" fill="#0B6E64">60°</text>
+            <text x="162" y="192" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="16" fill="#B07A16">∠5?</text>
+            <text x="176" y="252" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="16" fill="#5A4BC7">∠7?</text>
+          </svg>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="background:#FFFFFF;border-radius:10px;padding:10px 14px;font-size:15px;line-height:1.5">∠1 y ∠5 son <strong>correspondientes</strong> → iguales → <strong>∠5 = 60°</strong>.</div>
+            <div style="background:#FFFFFF;border-radius:10px;padding:10px 14px;font-size:15px;line-height:1.5">∠1 y ∠7 son <strong>conjugados externos</strong> → suman 180° → ∠7 = 180° − 60° = <strong>120°</strong>.</div>
+          </div>
+        </div>
+        <div style="flex:1 1 340px;min-width:300px;background:#F7FBFA;border:1px solid #DEEAE7;border-radius:20px;padding:26px">
+          <div style="display:inline-block;background:#E1F1EE;color:#0B6E64;font-weight:800;font-size:13px;padding:4px 12px;border-radius:99px;margin-bottom:12px">Ejemplo B · ecuación con "iguales"</div>
+          <p style="font-size:16px;line-height:1.6;margin:0 0 12px"><strong>∠3 = (2x + 40)° y ∠6 = (3x + 10)° son alternos internos. Halla x.</strong></p>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="background:#FFFFFF;border-radius:10px;padding:10px 14px;font-size:15px;line-height:1.5"><strong>1.</strong> Alternos internos → son iguales.</div>
+            <div style="background:#FFFFFF;border-radius:10px;padding:10px 14px;font-size:15px;line-height:1.5"><strong>2.</strong> Ecuación: 2x + 40 = 3x + 10</div>
+            <div style="background:#FFFFFF;border-radius:10px;padding:10px 14px;font-size:15px;line-height:1.5"><strong>3.</strong> 40 − 10 = 3x − 2x → <strong>x = 30</strong></div>
+            <div style="background:#FFFFFF;border-radius:10px;padding:10px 14px;font-size:15px;line-height:1.5"><strong>4.</strong> Comprobación: 2(30)+40 = 100° y 3(30)+10 = 100°. Coinciden.</div>
+          </div>
+        </div>
+        <div style="flex:1 1 340px;min-width:300px;background:#F7FBFA;border:1px solid #DEEAE7;border-radius:20px;padding:26px">
+          <div style="display:inline-block;background:#FDECE7;color:#C24A2F;font-weight:800;font-size:13px;padding:4px 12px;border-radius:99px;margin-bottom:12px">Ejemplo C · ecuación con "suman 180°"</div>
+          <p style="font-size:16px;line-height:1.6;margin:0 0 12px"><strong>∠4 = (x + 20)° y ∠6 = (2x + 40)° son conjugados internos. Halla x.</strong></p>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="background:#FFFFFF;border-radius:10px;padding:10px 14px;font-size:15px;line-height:1.5"><strong>1.</strong> Conjugados internos → suman 180°.</div>
+            <div style="background:#FFFFFF;border-radius:10px;padding:10px 14px;font-size:15px;line-height:1.5"><strong>2.</strong> Ecuación: (x + 20) + (2x + 40) = 180</div>
+            <div style="background:#FFFFFF;border-radius:10px;padding:10px 14px;font-size:15px;line-height:1.5"><strong>3.</strong> 3x + 60 = 180 → 3x = 120 → <strong>x = 40</strong></div>
+            <div style="background:#FFFFFF;border-radius:10px;padding:10px 14px;font-size:15px;line-height:1.5"><strong>4.</strong> Comprobación: 60° + 120° = 180°. Correcto.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRACTICA -->
+  <section id="practica" data-screen-label="Práctica" style="background:#0B4A42;padding:72px 24px 88px">
+    <div style="max-width:1100px;margin:0 auto">
+      <div style="display:inline-block;background:rgba(255,255,255,.14);color:#CFF0EB;font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:99px;margin-bottom:12px">Práctica tipo evaluación</div>
+      <h2 style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:34px;color:#FFFFFF;margin:0 0 10px">Ponte a prueba</h2>
+      <p style="font-size:17px;line-height:1.6;color:#C9E8E2;max-width:680px;margin:0 0 32px">12 preguntas: identificación, cálculo de ángulos y ecuaciones. Si te equivocas, verás la resolución correcta paso a paso.</p>
+      <div style="display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start">
+        <div style="flex:0 1 360px;min-width:280px;background:#FFFFFF;border-radius:20px;padding:20px">
+          <svg viewBox="0 0 360 300" style="width:100%;height:auto;display:block">
+            <rect x="20" y="93" width="310" height="114" fill="#0F9D8F" opacity="0.06"></rect>
+            <line x1="20" y1="90" x2="330" y2="90" stroke="#3A5B55" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="20" y1="210" x2="330" y2="210" stroke="#3A5B55" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="90" y1="21" x2="239" y2="279" stroke="#7C8F8B" stroke-width="3" stroke-linecap="round"></line>
+            <path d="M292,83 L306,90 L292,97" fill="none" stroke="#3A5B55" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"></path>
+            <path d="M292,203 L306,210 L292,217" fill="none" stroke="#3A5B55" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"></path>
+            <text x="343" y="95" font-family="Nunito" font-weight="800" font-size="16" fill="#3A5B55">a</text>
+            <text x="343" y="215" font-family="Nunito" font-weight="800" font-size="16" fill="#3A5B55">b</text>
+            <text x="250" y="268" font-family="Nunito" font-weight="800" font-size="16" fill="#7C8F8B">t</text>
+            <text x="97" y="76" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="17" fill="#134E48">1</text>
+            <text x="151" y="61" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="17" fill="#134E48">2</text>
+            <text x="109" y="129" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="17" fill="#0F9D8F">3</text>
+            <text x="165" y="114" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="17" fill="#0F9D8F">4</text>
+            <text x="166" y="196" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="17" fill="#0F9D8F">5</text>
+            <text x="218" y="180" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="17" fill="#0F9D8F">6</text>
+            <text x="178" y="249" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="17" fill="#134E48">7</text>
+            <text x="234" y="234" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="17" fill="#134E48">8</text>
+          </svg>
+          <p style="font-size:14px;font-weight:700;color:#4E6B65;text-align:center;margin:10px 0 0">Figura de referencia para todas las preguntas.</p>
+        </div>
+
+        <div style="flex:1 1 520px;min-width:300px;background:#FFFFFF;border-radius:24px;padding:32px">
+          <sc-if value="{{ quizEnCurso }}" hint-placeholder-val="{{ true }}">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px">
+              <span style="font-size:14px;font-weight:800;color:#0B6E64;letter-spacing:.05em;text-transform:uppercase">{{ progresoTexto }}</span>
+              <span style="font-size:14px;font-weight:800;color:#4E6B65">{{ scoreTexto }}</span>
+            </div>
+            <div style="height:8px;background:#E8F1EF;border-radius:99px;margin-bottom:22px;overflow:hidden">
+              <div style="width:{{ progresoPct }}%;height:100%;background:#0F9D8F;border-radius:99px;transition:width .3s"></div>
+            </div>
+            <p style="font-size:19px;font-weight:800;line-height:1.5;color:#21403A;margin:0 0 18px">{{ qTexto }}</p>
+            <sc-if value="{{ esMC }}" hint-placeholder-val="{{ true }}">
+              <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:18px">
+                <sc-for list="{{ opciones }}" as="opt" hint-placeholder-count="4">
+                  <button onClick="{{ opt.onClick }}" style="text-align:left;font-family:'Nunito',sans-serif;font-size:16px;font-weight:700;padding:13px 16px;border-radius:12px;cursor:pointer;background:{{ opt.bg }};border:2px solid {{ opt.border }};color:{{ opt.color }}">{{ opt.label }}</button>
+                </sc-for>
+              </div>
+            </sc-if>
+            <sc-if value="{{ esNum }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px">
+                <input type="number" value="{{ inputValor }}" onChange="{{ alEscribir }}" disabled="{{ inputBloqueado }}" placeholder="Tu respuesta" style="font-family:'Nunito',sans-serif;font-size:18px;font-weight:800;padding:12px 16px;border:2px solid #D8E3E0;border-radius:12px;width:180px;color:#21403A;outline:none" style-focus="border:2px solid #0F9D8F">
+                <span style="font-size:15px;font-weight:700;color:#4E6B65">(solo el número)</span>
+              </div>
+            </sc-if>
+            <sc-if value="{{ muestraPista }}" hint-placeholder-val="{{ false }}">
+              <div style="background:#FDF4E3;border:1px solid #F0D9A8;border-radius:12px;padding:12px 16px;margin-bottom:18px">
+                <span style="font-weight:800;color:#8A5B14;font-size:15px">Pista: </span>
+                <span style="font-size:15px;color:#6B4A10;line-height:1.5">{{ pistaTexto }}</span>
+              </div>
+            </sc-if>
+            <sc-if value="{{ sinComprobar }}" hint-placeholder-val="{{ true }}">
+              <button onClick="{{ comprobar }}" style="font-family:'Nunito',sans-serif;font-size:17px;font-weight:800;background:#0F9D8F;color:#FFFFFF;border:none;border-radius:12px;padding:13px 28px;cursor:pointer;opacity:{{ comprobarOpacidad }}" style-hover="background:#0B6E64">Comprobar</button>
+            </sc-if>
+            <sc-if value="{{ comprobado }}" hint-placeholder-val="{{ false }}">
+              <div style="background:{{ bannerBg }};border:2px solid {{ bannerBorde }};border-radius:14px;padding:16px 18px;margin-bottom:18px">
+                <div style="font-weight:800;font-size:17px;margin-bottom:8px;color:{{ bannerColor }}">{{ bannerTexto }}</div>
+                <div style="display:flex;flex-direction:column;gap:7px">
+                  <sc-for list="{{ pasos }}" as="paso" hint-placeholder-count="1">
+                    <div style="font-size:15px;line-height:1.55;color:#3C5751;background:rgba(255,255,255,.7);border-radius:8px;padding:8px 12px">{{ paso }}</div>
+                  </sc-for>
+                </div>
+              </div>
+              <button onClick="{{ siguiente }}" style="font-family:'Nunito',sans-serif;font-size:17px;font-weight:800;background:#134E48;color:#FFFFFF;border:none;border-radius:12px;padding:13px 28px;cursor:pointer" style-hover="background:#0B6E64">{{ siguienteTexto }}</button>
+            </sc-if>
+          </sc-if>
+          <sc-if value="{{ quizTerminado }}" hint-placeholder-val="{{ false }}">
+            <div style="text-align:center;padding:20px 0">
+              <div style="font-size:14px;font-weight:800;color:#0B6E64;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px">Resultado final</div>
+              <div style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:58px;color:#134E48;line-height:1">{{ notaFinal }}</div>
+              <div style="font-size:17px;font-weight:800;color:#0F9D8F;margin:8px 0 14px">{{ pctFinal }} de aciertos</div>
+              <p style="font-size:17px;line-height:1.6;color:#4E6B65;max-width:420px;margin:0 auto 24px">{{ mensajeFinal }}</p>
+              <button onClick="{{ reiniciar }}" style="font-family:'Nunito',sans-serif;font-size:17px;font-weight:800;background:#0F9D8F;color:#FFFFFF;border:none;border-radius:12px;padding:13px 28px;cursor:pointer" style-hover="background:#0B6E64">Intentar de nuevo</button>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#083A34;padding:24px;text-align:center">
+    <p style="font-size:14px;font-weight:700;color:#8FC4BC;margin:0">Consejo: repite la práctica hasta lograr 12 de 12 dos veces seguidas. ¡Tú puedes!</p>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;mostrarPistas&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Práctica&quot;},&quot;barajarPreguntas&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Práctica&quot;}}">
+class Component extends DCLogic {
+  state = { idx: 0, selected: null, input: '', checked: false, correct: false, score: 0, done: false, order: [] };
+
+  banco() {
+    return [
+      {
+        tipo: 'mc',
+        texto: 'En la figura, los ángulos 3 y 6 son…',
+        opciones: ['Correspondientes', 'Alternos internos', 'Conjugados internos', 'Alternos externos'],
+        correcta: 1,
+        pista: '¿Están dentro o fuera de las paralelas? ¿Mismo lado de la transversal o lados opuestos?',
+        porque: '∠3 y ∠6 están entre las paralelas y en lados opuestos de la transversal: alternos internos (forman una Z). Son iguales.',
+        pasos: [
+          'Paso 1 — ¿Dentro o fuera? ∠3 y ∠6 están entre las dos paralelas → son internos.',
+          'Paso 2 — ¿Qué lado? ∠3 está a la izquierda de la transversal y ∠6 a la derecha → lados opuestos.',
+          'Internos + lados opuestos = ALTERNOS INTERNOS (forman una Z). Además, son iguales.'
+        ]
+      },
+      {
+        tipo: 'mc',
+        texto: 'En la figura, los ángulos 2 y 6 son…',
+        opciones: ['Alternos externos', 'Conjugados externos', 'Correspondientes', 'Alternos internos'],
+        correcta: 2,
+        pista: 'Fíjate si ocupan la misma posición en cada cruce.',
+        porque: '∠2 y ∠6 ocupan la misma posición (arriba a la derecha) en cada cruce: son correspondientes y son iguales.',
+        pasos: [
+          'Paso 1 — ∠2 está arriba a la derecha del primer cruce; ∠6 está arriba a la derecha del segundo cruce.',
+          'Paso 2 — Misma posición + mismo lado de la transversal + cruces distintos = CORRESPONDIENTES (forman una F).',
+          'Los correspondientes son iguales: ∠2 = ∠6.'
+        ]
+      },
+      {
+        tipo: 'mc',
+        texto: 'En la figura, los ángulos 4 y 6 son…',
+        opciones: ['Conjugados internos', 'Alternos internos', 'Correspondientes', 'Conjugados externos'],
+        correcta: 0,
+        pista: 'Los dos están entre las paralelas. ¿Están del mismo lado de la transversal?',
+        porque: '∠4 y ∠6 son internos y están del mismo lado de la transversal: conjugados internos. Suman 180°.',
+        pasos: [
+          'Paso 1 — ∠4 y ∠6 están entre las paralelas → internos.',
+          'Paso 2 — Los dos quedan a la derecha de la transversal → mismo lado.',
+          'Internos + mismo lado = CONJUGADOS INTERNOS (forman una C). No son iguales: suman 180°.'
+        ]
+      },
+      {
+        tipo: 'mc',
+        texto: 'En la figura, los ángulos 2 y 7 son…',
+        opciones: ['Correspondientes', 'Conjugados externos', 'Alternos internos', 'Alternos externos'],
+        correcta: 3,
+        pista: 'Los dos están fuera de las paralelas. ¿Mismo lado o lados opuestos?',
+        porque: '∠2 y ∠7 son externos y están en lados opuestos de la transversal: alternos externos. Son iguales.',
+        pasos: [
+          'Paso 1 — ∠2 está por encima de la paralela a y ∠7 por debajo de la paralela b → los dos son externos.',
+          'Paso 2 — ∠2 queda a la derecha de la transversal y ∠7 a la izquierda → lados opuestos.',
+          'Externos + lados opuestos = ALTERNOS EXTERNOS. Son iguales: ∠2 = ∠7.'
+        ]
+      },
+      {
+        tipo: 'mc',
+        texto: 'En la figura, los ángulos 1 y 7 son…',
+        opciones: ['Alternos externos', 'Conjugados externos', 'Correspondientes', 'Conjugados internos'],
+        correcta: 1,
+        pista: 'Los dos están fuera de las paralelas y… ¿del mismo lado de la transversal?',
+        porque: '∠1 y ∠7 son externos y están del mismo lado de la transversal: conjugados externos. Suman 180°.',
+        pasos: [
+          'Paso 1 — ∠1 y ∠7 están fuera de las paralelas → externos.',
+          'Paso 2 — Los dos quedan a la izquierda de la transversal → mismo lado.',
+          'Externos + mismo lado = CONJUGADOS EXTERNOS. Suman 180°: ∠1 + ∠7 = 180°.'
+        ]
+      },
+      {
+        tipo: 'num',
+        texto: 'Si ∠1 = 75°, ¿cuánto mide ∠5? (en grados)',
+        respuesta: 75,
+        pista: '∠1 y ∠5 ocupan la misma posición en cada cruce. ¿Qué relación tienen los correspondientes?',
+        porque: '∠1 y ∠5 son correspondientes, así que son iguales: ∠5 = 75°.',
+        pasos: [
+          'Paso 1 — ∠1 y ∠5 ocupan la misma posición en cada cruce → correspondientes.',
+          'Paso 2 — Los correspondientes son IGUALES: ∠5 = ∠1.',
+          'Respuesta: ∠5 = 75°.'
+        ]
+      },
+      {
+        tipo: 'num',
+        texto: 'Si ∠3 = 110°, ¿cuánto mide ∠5? (en grados)',
+        respuesta: 70,
+        pista: '∠3 y ∠5 son internos y del mismo lado. Los conjugados no son iguales…',
+        porque: '∠3 y ∠5 son conjugados internos: suman 180°. Por eso ∠5 = 180° − 110° = 70°.',
+        pasos: [
+          'Paso 1 — ∠3 y ∠5 están entre las paralelas y del mismo lado → conjugados internos.',
+          'Paso 2 — Los conjugados SUMAN 180°: ∠3 + ∠5 = 180°.',
+          'Paso 3 — ∠5 = 180° − 110° = 70°.'
+        ]
+      },
+      {
+        tipo: 'num',
+        texto: 'Si ∠4 = 62°, ¿cuánto mide ∠5? (en grados)',
+        respuesta: 62,
+        pista: '∠4 y ∠5 están dentro y en lados opuestos. ¿Forman una Z?',
+        porque: '∠4 y ∠5 son alternos internos: son iguales, así que ∠5 = 62°.',
+        pasos: [
+          'Paso 1 — ∠4 y ∠5 están entre las paralelas y en lados opuestos → alternos internos.',
+          'Paso 2 — Los alternos son IGUALES.',
+          'Respuesta: ∠5 = 62°.'
+        ]
+      },
+      {
+        tipo: 'num',
+        texto: 'Si ∠2 = 125°, ¿cuánto mide ∠8? (en grados)',
+        respuesta: 55,
+        pista: '∠2 y ∠8 son externos y del mismo lado de la transversal.',
+        porque: '∠2 y ∠8 son conjugados externos: suman 180°. Por eso ∠8 = 180° − 125° = 55°.',
+        pasos: [
+          'Paso 1 — ∠2 y ∠8 están fuera de las paralelas y del mismo lado → conjugados externos.',
+          'Paso 2 — Los conjugados SUMAN 180°: ∠2 + ∠8 = 180°.',
+          'Paso 3 — ∠8 = 180° − 125° = 55°.'
+        ]
+      },
+      {
+        tipo: 'num',
+        texto: '∠2 = (3x + 10)° y ∠6 = (5x − 30)° son correspondientes. ¿Cuánto vale x?',
+        respuesta: 20,
+        pista: 'Los correspondientes son iguales: iguala las dos expresiones.',
+        porque: 'Correspondientes → iguales: 3x + 10 = 5x − 30 → 40 = 2x → x = 20.',
+        pasos: [
+          'Paso 1 — Correspondientes → son iguales: 3x + 10 = 5x − 30.',
+          'Paso 2 — Agrupamos: 10 + 30 = 5x − 3x → 40 = 2x.',
+          'Paso 3 — x = 20. Comprobación: 3(20)+10 = 70° y 5(20)−30 = 70°. Coinciden.'
+        ]
+      },
+      {
+        tipo: 'num',
+        texto: '∠4 = (2x + 15)° y ∠5 = (x + 40)° son alternos internos. ¿Cuánto vale x?',
+        respuesta: 25,
+        pista: 'Los alternos internos son iguales: iguala las dos expresiones.',
+        porque: 'Alternos internos → iguales: 2x + 15 = x + 40 → x = 25.',
+        pasos: [
+          'Paso 1 — Alternos internos → son iguales: 2x + 15 = x + 40.',
+          'Paso 2 — 2x − x = 40 − 15 → x = 25.',
+          'Paso 3 — Comprobación: 2(25)+15 = 65° y 25+40 = 65°. Coinciden.'
+        ]
+      },
+      {
+        tipo: 'num',
+        texto: '∠3 = (2x)° y ∠5 = (x + 30)° son conjugados internos. ¿Cuánto vale x?',
+        respuesta: 50,
+        pista: 'Los conjugados NO son iguales: su suma es 180°.',
+        porque: 'Conjugados internos → suman 180°: 2x + x + 30 = 180 → 3x = 150 → x = 50.',
+        pasos: [
+          'Paso 1 — Conjugados internos → SUMAN 180°: 2x + (x + 30) = 180.',
+          'Paso 2 — 3x + 30 = 180 → 3x = 150 → x = 50.',
+          'Paso 3 — Comprobación: ∠3 = 100° y ∠5 = 80°; 100 + 80 = 180. Correcto.'
+        ]
+      }
+    ];
+  }
+
+  componentDidMount() {
+    this.reiniciar();
+  }
+
+  reiniciar() {
+    const n = this.banco().length;
+    const order = Array.from({ length: n }, (_, i) => i);
+    if (this.props.barajarPreguntas) {
+      for (let i = n - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [order[i], order[j]] = [order[j], order[i]];
+      }
+    }
+    this.setState({ idx: 0, selected: null, input: '', checked: false, correct: false, score: 0, done: false, order });
+  }
+
+  actual() {
+    const b = this.banco();
+    const order = (this.state.order && this.state.order.length === b.length) ? this.state.order : b.map((_, i) => i);
+    return b[order[Math.min(this.state.idx, b.length - 1)]];
+  }
+
+  comprobar() {
+    if (this.state.checked) return;
+    const q = this.actual();
+    let ok;
+    if (q.tipo === 'mc') {
+      if (this.state.selected == null) return;
+      ok = this.state.selected === q.correcta;
+    } else {
+      const v = parseFloat(String(this.state.input).replace(',', '.'));
+      if (isNaN(v)) return;
+      ok = Math.abs(v - q.respuesta) < 0.01;
+    }
+    this.setState(s => ({ checked: true, correct: ok, score: s.score + (ok ? 1 : 0) }));
+  }
+
+  siguiente() {
+    const n = this.banco().length;
+    if (this.state.idx + 1 >= n) {
+      this.setState({ done: true });
+    } else {
+      this.setState(s => ({ idx: s.idx + 1, selected: null, input: '', checked: false, correct: false }));
+    }
+  }
+
+  renderVals() {
+    const s = this.state;
+    const banco = this.banco();
+    const total = banco.length;
+    const q = this.actual();
+    const mostrarPistas = this.props.mostrarPistas ?? true;
+    const esMC = q.tipo === 'mc';
+
+    const opciones = (q.opciones || []).map((label, i) => {
+      const sel = s.selected === i;
+      let bg = '#FFFFFF', border = '#D8E3E0', color = '#28403B';
+      if (!s.checked && sel) { bg = '#E6F4F1'; border = '#0F9D8F'; color = '#0B6E64'; }
+      if (s.checked) {
+        if (i === q.correcta) { bg = '#E3F6EC'; border = '#2FA870'; color = '#1D6B47'; }
+        else if (sel) { bg = '#FDEAE6'; border = '#E2604A'; color = '#9C3A2A'; }
+        else { color = '#8AA19B'; }
+      }
+      return { label, bg, border, color, onClick: () => { if (!this.state.checked) this.setState({ selected: i }); } };
+    });
+
+    const puede = esMC ? s.selected != null : String(s.input).trim() !== '';
+    const pasos = !s.checked ? [] : (s.correct ? [q.porque] : q.pasos);
+    const pct = total ? s.score / total : 0;
+    let mensajeFinal;
+    if (pct >= 0.9) mensajeFinal = '¡Excelente! Dominas el tema. Estás lista para la evaluación.';
+    else if (pct >= 0.6) mensajeFinal = '¡Muy bien! Repasa los tipos de ángulos que fallaste y vuelve a intentarlo.';
+    else mensajeFinal = 'Buen intento. Vuelve a leer la guía (sobre todo la tabla resumen) y repite la práctica.';
+
+    return {
+      quizEnCurso: !s.done,
+      quizTerminado: s.done,
+      progresoTexto: 'Pregunta ' + (s.idx + 1) + ' de ' + total,
+      progresoPct: Math.round(((s.idx + (s.checked ? 1 : 0)) / total) * 100),
+      scoreTexto: 'Aciertos: ' + s.score,
+      qTexto: q.texto,
+      esMC,
+      esNum: !esMC,
+      opciones,
+      inputValor: s.input,
+      alEscribir: (e) => this.setState({ input: e.target.value }),
+      inputBloqueado: s.checked,
+      muestraPista: mostrarPistas && !s.checked,
+      pistaTexto: q.pista,
+      sinComprobar: !s.checked,
+      comprobado: s.checked,
+      comprobar: () => this.comprobar(),
+      comprobarOpacidad: puede ? 1 : 0.45,
+      bannerBg: s.correct ? '#E3F6EC' : '#FCEFE3',
+      bannerBorde: s.correct ? '#2FA870' : '#E8A13C',
+      bannerColor: s.correct ? '#1D6B47' : '#8A5B14',
+      bannerTexto: s.correct ? '¡Correcto! Muy bien.' : 'Esta vez no… así se resuelve:',
+      pasos,
+      siguiente: () => this.siguiente(),
+      siguienteTexto: s.idx + 1 >= total ? 'Ver mi resultado' : 'Siguiente pregunta',
+      reiniciar: () => this.reiniciar(),
+      notaFinal: s.score + ' / ' + total,
+      pctFinal: Math.round(pct * 100) + '%',
+      mensajeFinal
+    };
+  }
+}
+</script>
+</body>
+</html>
